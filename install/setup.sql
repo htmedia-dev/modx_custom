@@ -861,7 +861,7 @@ REPLACE INTO `{PREFIX}site_templates`
 # Default Site Documents
 
 
-REPLACE INTO `{PREFIX}site_content` VALUES (1,'document','text/html','MODX CMS Install Success','Welcome to the MODX Content Management System','','minimal-base','',1,0,0,0,0,'','<h3>Install Successful!</h3>\r\n<p>You have successfully installed MODX.</p>\r\n\r\n<h3>Getting Help</h3>\r\n<p>The <a href=\"http://forums.modx.com/\" target=\"_blank\">MODX Community</a> provides a great starting point to learn all things MODX, or you can also <a href=\"http://modxcms.com/learn/it.html\">see some great learning resources</a> (books, tutorials, blogs and screencasts).</p>\r\n<p>Welcome to MODX!</p>\r\n',1,3,0,1,1,1,1130304721,1,1130304927,0,0,0,1130304721,1,'Base Install',0,0,0,0,0,0,0);
+REPLACE INTO `{PREFIX}site_content` VALUES (1,'document','text/html','MODX CMS Install Success','Welcome to the MODX Content Management System','','minimal-base','',1,0,0,0,0,'','<h3>Install Successful!</h3>\r\n<p>You have successfully installed MODX.</p>\r\n\r\n<h3>Getting Help</h3>\r\n<p>The <a href=\"http://forums.modx.com/\" target=\"_blank\">MODX Community</a> provides a great starting point to learn all things MODX, or you can also <a href=\"http://modxcms.com/learn/it.html\">see some great learning resources</a> (books, tutorials, blogs and screencasts).</p>\r\n<p>Welcome to MODX!</p>\r\n',1,5,0,1,1,1,1130304721,1,1130304927,0,0,0,1130304721,1,'Base Install',0,0,0,0,0,0,0);
 
 REPLACE INTO `{PREFIX}site_content` VALUES (2, 'document', 'text/xml', 'sitemap', '', '', 'sitemap.xml', '', 1, 0, 0, 0, 0, '', '[!SiteMap? &amp;format=`sp` &amp;priority=`sitemap_priority` &amp;changefreq=`sitemap_changefreq`!]', 0, 0, 100, 0, 0, 1, 1130304721, 1, 1130304927, 0, 0, 0, 1130304721, 1, '', 0, 0, 0, 0, 0, 0, 1); 
 
@@ -953,7 +953,7 @@ INSERT IGNORE INTO `{PREFIX}system_settings`
 ('session.cookie.lifetime','604800'),
 ('mail_check_timeperiod','60'),
 ('manager_direction','ltr'),
-('tinymce_editor_theme','full'),
+('tinymce_editor_theme','creative'),
 ('tinymce_custom_plugins','style,advimage,advlink,searchreplace,print,contextmenu,paste,fullscreen,nonbreaking,xhtmlxtras,visualchars,media'),
 ('tinymce_custom_buttons1','undo,redo,selectall,separator,pastetext,pasteword,separator,search,replace,separator,nonbreaking,hr,charmap,separator,image,link,unlink,anchor,media,separator,cleanup,removeformat,separator,fullscreen,print,code,help'),
 ('tinymce_custom_buttons2','bold,italic,underline,strikethrough,sub,sup,separator,bullist,numlist,outdent,indent,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,styleselect,formatselect,separator,styleprops'),
