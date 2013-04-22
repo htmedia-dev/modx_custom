@@ -863,6 +863,8 @@ REPLACE INTO `{PREFIX}site_templates`
 
 REPLACE INTO `{PREFIX}site_content` VALUES (1,'document','text/html','MODX CMS Install Success','Welcome to the MODX Content Management System','','minimal-base','',1,0,0,0,0,'','<h3>Install Successful!</h3>\r\n<p>You have successfully installed MODX.</p>\r\n\r\n<h3>Getting Help</h3>\r\n<p>The <a href=\"http://forums.modx.com/\" target=\"_blank\">MODX Community</a> provides a great starting point to learn all things MODX, or you can also <a href=\"http://modxcms.com/learn/it.html\">see some great learning resources</a> (books, tutorials, blogs and screencasts).</p>\r\n<p>Welcome to MODX!</p>\r\n',1,3,0,1,1,1,1130304721,1,1130304927,0,0,0,1130304721,1,'Base Install',0,0,0,0,0,0,0);
 
+REPLACE INTO `{PREFIX}site_content` VALUES (2, 'document', 'text/xml', 'sitemap', '', '', 'sitemap.xml', '', 1, 0, 0, 0, 0, '', '[!SiteMap? &amp;format=`sp` &amp;priority=`sitemap_priority` &amp;changefreq=`sitemap_changefreq`!]', 0, 0, 100, 0, 0, 1, 1130304721, 1, 1130304927, 0, 0, 0, 1130304721, 1, '', 0, 0, 0, 0, 0, 0, 1); 
+
 
 REPLACE INTO `{PREFIX}manager_users` 
 (id, username, password)VALUES 
@@ -900,18 +902,18 @@ INSERT IGNORE INTO `{PREFIX}system_settings`
 ('error_page','1'),
 ('unauthorized_page','1'),
 ('site_status','1'),
-('site_unavailable_message','The site is currently unavailable'),
+('site_unavailable_message','В настоящее время сайт недоступен.'),
 ('track_visitors','0'),
 ('top_howmany','10'),
-('auto_template_logic','{AUTOTEMPLATELOGIC}'),
-('default_template','3'),
+('auto_template_logic','sibling'),
+('default_template','5'),
 ('old_template',''),
-('publish_default','0'),
+('publish_default','1'),
 ('cache_default','1'),
 ('search_default','1'),
 ('friendly_urls','0'),
 ('friendly_url_prefix',''),
-('friendly_url_suffix','.html'),
+('friendly_url_suffix',''),
 ('friendly_alias_urls','1'),
 ('use_alias_path','0'),
 ('use_udperms','1'),
@@ -921,7 +923,7 @@ INSERT IGNORE INTO `{PREFIX}system_settings`
 ('use_captcha','0'),
 ('captcha_words','MODX,Access,Better,BitCode,Cache,Desc,Design,Excell,Enjoy,URLs,TechView,Gerald,Griff,Humphrey,Holiday,Intel,Integration,Joystick,Join(),Tattoo,Genetic,Light,Likeness,Marit,Maaike,Niche,Netherlands,Ordinance,Oscillo,Parser,Phusion,Query,Question,Regalia,Righteous,Snippet,Sentinel,Template,Thespian,Unity,Enterprise,Verily,Veri,Website,WideWeb,Yap,Yellow,Zebra,Zygote'),
 ('emailsender','{ADMINEMAIL}'),
-('emailsubject','Your login details'),
+('emailsubject','Данные для авторизации'),
 ('number_of_logs','100'),
 ('number_of_messages','30'),
 ('number_of_results','20'),
@@ -951,7 +953,7 @@ INSERT IGNORE INTO `{PREFIX}system_settings`
 ('session.cookie.lifetime','604800'),
 ('mail_check_timeperiod','60'),
 ('manager_direction','ltr'),
-('tinymce_editor_theme','editor'),
+('tinymce_editor_theme','full'),
 ('tinymce_custom_plugins','style,advimage,advlink,searchreplace,print,contextmenu,paste,fullscreen,nonbreaking,xhtmlxtras,visualchars,media'),
 ('tinymce_custom_buttons1','undo,redo,selectall,separator,pastetext,pasteword,separator,search,replace,separator,nonbreaking,hr,charmap,separator,image,link,unlink,anchor,media,separator,cleanup,removeformat,separator,fullscreen,print,code,help'),
 ('tinymce_custom_buttons2','bold,italic,underline,strikethrough,sub,sup,separator,bullist,numlist,outdent,indent,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,styleselect,formatselect,separator,styleprops'),
@@ -967,7 +969,8 @@ INSERT IGNORE INTO `{PREFIX}system_settings`
 ('warning_visibility', '1'),
 ('remember_last_tab', '0'),
 ('enable_bindings', '1'),
-('make_folders', '1');
+('make_folders', '1'),('site_template', 'assets/templates/'),
+('page_info', 'Mem: [^m^], SQL: [^qt^], [^q^] request(s), PHP: [^p^], total: [^t^], page retrieved from [^s^].');
 
 
 REPLACE INTO `{PREFIX}user_roles` 
